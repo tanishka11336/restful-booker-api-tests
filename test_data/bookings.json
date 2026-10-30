@@ -1,0 +1,51 @@
+{
+  "valid_bookings": [
+    {
+      "id": "with_deposit",
+      "firstname": "Asha",
+      "lastname": "Patil",
+      "totalprice": 450,
+      "depositpaid": true,
+      "bookingdates": {"checkin": "2026-12-01", "checkout": "2026-12-05"},
+      "additionalneeds": "Breakfast"
+    },
+    {
+      "id": "without_deposit",
+      "firstname": "Rohan",
+      "lastname": "Deshmukh",
+      "totalprice": 1200,
+      "depositpaid": false,
+      "bookingdates": {"checkin": "2027-01-10", "checkout": "2027-01-15"},
+      "additionalneeds": "Late checkout"
+    },
+    {
+      "id": "single_night",
+      "firstname": "Meera",
+      "lastname": "Kulkarni",
+      "totalprice": 99,
+      "depositpaid": true,
+      "bookingdates": {"checkin": "2027-02-14", "checkout": "2027-02-15"},
+      "additionalneeds": "None"
+    }
+  ],
+  "invalid_bookings": [
+    {
+      "id": "missing_firstname",
+      "payload": {
+        "lastname": "Patil",
+        "totalprice": 100,
+        "depositpaid": true,
+        "bookingdates": {"checkin": "2026-12-01", "checkout": "2026-12-05"}
+      }
+    },
+    {
+      "id": "missing_bookingdates",
+      "payload": {
+        "firstname": "Asha",
+        "lastname": "Patil",
+        "totalprice": 100,
+        "depositpaid": true
+      }
+    }
+  ]
+}
